@@ -443,40 +443,33 @@ header a {
 
 /* 13. Дополнительные трансформации и анимации */
 
-/* --- Трансформации для карточек --- */
-
-/* Добавляем плавный переход для трансформации */
 .book-card, .author-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* При наведении увеличиваем карточку и добавляем тень */
 .book-card:hover, .author-card:hover {
-    transform: scale(1.05); /* Увеличиваем на 5% */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Добавляем тень для эффекта "приподнятости" */
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
     cursor: pointer;
 }
 
 
 
-/* --- Анимация для заголовков --- */
-
-/* 1. Описываем саму анимацию */
 @keyframes fadeInUp {
   from {
-    opacity: 0; /* Начинаем с полной прозрачности */
-    transform: translateY(20px); /* И сдвигаем на 20px вниз */
+    opacity: 0; 
+    transform: translateY(20px); 
   }
   to {
-    opacity: 1; /* Заканчиваем полной видимостью */
-    transform: translateY(0); /* И возвращаем на исходную позицию */
+    opacity: 1; 
+    transform: translateY(0); 
   }
 }
 
-/* 2. Применяем анимацию к заголовкам */
+
 .hero-section h1 {
   animation-name: fadeInUp;
-  animation-duration: 1s; /* Длительность - 1 секунда */
+  animation-duration: 1s; 
   animation-timing-function: ease-out;
-  animation-fill-mode: forwards; /* Оставляет элемент в конечном состоянии после анимации */
+  animation-fill-mode: forwards; 
 }
