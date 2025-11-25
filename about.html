@@ -16,7 +16,15 @@
         </a>
         <nav>
             <ul>
-                <li><a href="allbooks.html">All BOOKS</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown()" class="dropbtn">All BOOKS ▾</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Fiction</a>
+                        <a href="#">Non-fiction</a>
+                        <a href="#">Science</a>
+                        <a href="#">Mystery</a>
+                    </div>
+                </li>
                 <li><a href="newarrival.html">NEW ARRIVAL</a></li>
                 <li><a href="editorspick.html">EDITORS PICK</a></li>
                 <li><a href="about.html">ABOUT</a></li>
@@ -32,7 +40,8 @@
     <main>
         <section class="hero-section">
             <h1>About Us</h1>
-            <p>Natoque euismod a hic porta. Auctor, consequatur occaecati magna natus pretium ornare ornare penatibus. Tempor viverra, erat veritatis</p>
+            <p>Natoque euismod a hic porta. Auctor, consequatur occaecati magna natus pretium ornare ornare penatibus.
+                Tempor viverra, erat veritatis</p>
         </section>
 
         <section class="split-section">
@@ -41,20 +50,27 @@
             </div>
             <div class="split-section__details">
                 <h2>Welcome to Bookworm</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem eget condimentum enim libero ultricies amet odio fringilla. Ut nibh morbi augue porta aliquet commodo. Fermentum auctor lacus eget in ut integer viverra sed. Penatibus tortor consequat, habitasse non nisl.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem eget condimentum enim libero ultricies
+                    amet odio fringilla. Ut nibh morbi augue porta aliquet commodo. Fermentum auctor lacus eget in ut
+                    integer viverra sed. Penatibus tortor consequat, habitasse non nisl.</p>
                 <h2>Our Vision</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem eget condimentum enim libero ultricies amet odio fringilla. Ut nibh morbi augue porta aliquet commodo. Fermentum auctor lacus eget in ut integer viverra sed. Penatibus tortor consequat, habitasse non nisl.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem eget condimentum enim libero ultricies
+                    amet odio fringilla. Ut nibh morbi augue porta aliquet commodo. Fermentum auctor lacus eget in ut
+                    integer viverra sed. Penatibus tortor consequat, habitasse non nisl.</p>
                 <h2>Our Mission</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem eget condimentum enim libero ultricies amet odio fringilla. Ut nibh morbi augue porta aliquet commodo. Fermentum auctor lacus eget in ut integer viverra sed. Penatibus tortor consequat, habitasse non nisl.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem eget condimentum enim libero ultricies
+                    amet odio fringilla. Ut nibh morbi augue porta aliquet commodo. Fermentum auctor lacus eget in ut
+                    integer viverra sed. Penatibus tortor consequat, habitasse non nisl.</p>
             </div>
         </section>
 
         <section class="authors-section">
             <div class="section-header">
                 <h2>Most Popular Authors</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
             </div>
-            
+
             <div class="authors-grid">
                 <div class="author-card">
                     <img src="img/Steven Moore.jpg" alt="Photo of Steven Moore">
@@ -141,5 +157,23 @@
         </div>
     </footer>
 
+    <script>
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
 </body>
+
 </html>
