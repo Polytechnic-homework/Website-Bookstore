@@ -17,7 +17,15 @@
         
         <nav>
             <ul>
-                <li><a href="allbooks.html">All BOOKS</a></li>
+                <li class="dropdown">
+    <a href="#" onclick="toggleDropdown()" class="dropbtn">All BOOKS ▾</a>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#">Fiction</a>
+        <a href="#">Non-fiction</a>
+        <a href="#">Science</a>
+        <a href="#">Mystery</a>
+    </div>
+</li>
                 <li><a href="newarrival.html">NEW ARRIVAL</a></li>
                 <li><a href="editorspick.html">EDITORS PICK</a></li>
                 <li><a href="about.html">ABOUT</a></li>
@@ -268,6 +276,26 @@
             </div>
         </div>
     </footer>
+
+    <script>
+/* Коли користувач натискає кнопку, перемикаємо відображення меню */
+function toggleDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+/* Закриваємо меню, якщо клікнути повз нього */
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>
 
 </body>
 </html>
